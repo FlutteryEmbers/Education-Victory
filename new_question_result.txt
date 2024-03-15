@@ -1,0 +1,100 @@
+0===================
+problem_id:6
+Query: SELECT "problemnew_problemnew"."id", "problemnew_problemnew"."title", "problemnew_problemnew"."remark" FROM "problemnew_problemnew" WHERE "problemnew_problemnew"."id" = 6 LIMIT 21
+Duration: 0.000 seconds
+===================
+1===================
+problem_id:6
+Query: SELECT "questionnew_questionnew"."id", "questionnew_questionnew"."title", "questionnew_questionnew"."type", "questionnew_questionnew"."problem_id", "questionnew_questionnew"."payload", "questionnew_questionnew"."stage" FROM "questionnew_questionnew" WHERE "questionnew_questionnew"."problem_id" = 6
+Duration: 0.000 seconds
+===================
+2===================
+problem_id:1
+Query: SELECT "problemnew_problemnew"."id", "problemnew_problemnew"."title", "problemnew_problemnew"."remark" FROM "problemnew_problemnew" WHERE "problemnew_problemnew"."id" = 1 LIMIT 21
+Duration: 0.000 seconds
+===================
+3===================
+problem_id:1
+Query: SELECT "questionnew_questionnew"."id", "questionnew_questionnew"."title", "questionnew_questionnew"."type", "questionnew_questionnew"."problem_id", "questionnew_questionnew"."payload", "questionnew_questionnew"."stage" FROM "questionnew_questionnew" WHERE "questionnew_questionnew"."problem_id" = 1
+Duration: 0.000 seconds
+===================
+4===================
+problem_id:1
+Query: SELECT "problemnew_problemnew"."id", "problemnew_problemnew"."title", "problemnew_problemnew"."remark" FROM "problemnew_problemnew" WHERE "problemnew_problemnew"."id" = 1 LIMIT 21
+Duration: 0.000 seconds
+===================
+5===================
+problem_id:1
+Query: SELECT "questionnew_questionnew"."id", "questionnew_questionnew"."title", "questionnew_questionnew"."type", "questionnew_questionnew"."problem_id", "questionnew_questionnew"."payload", "questionnew_questionnew"."stage" FROM "questionnew_questionnew" WHERE "questionnew_questionnew"."problem_id" = 1
+Duration: 0.000 seconds
+===================
+6===================
+problem_id:9
+Query: SELECT "problemnew_problemnew"."id", "problemnew_problemnew"."title", "problemnew_problemnew"."remark" FROM "problemnew_problemnew" WHERE "problemnew_problemnew"."id" = 9 LIMIT 21
+Duration: 0.000 seconds
+===================
+7===================
+problem_id:9
+Query: SELECT "questionnew_questionnew"."id", "questionnew_questionnew"."title", "questionnew_questionnew"."type", "questionnew_questionnew"."problem_id", "questionnew_questionnew"."payload", "questionnew_questionnew"."stage" FROM "questionnew_questionnew" WHERE "questionnew_questionnew"."problem_id" = 9
+Duration: 0.000 seconds
+===================
+8===================
+problem_id:3
+Query: SELECT "problemnew_problemnew"."id", "problemnew_problemnew"."title", "problemnew_problemnew"."remark" FROM "problemnew_problemnew" WHERE "problemnew_problemnew"."id" = 3 LIMIT 21
+Duration: 0.000 seconds
+===================
+9===================
+problem_id:3
+Query: SELECT "questionnew_questionnew"."id", "questionnew_questionnew"."title", "questionnew_questionnew"."type", "questionnew_questionnew"."problem_id", "questionnew_questionnew"."payload", "questionnew_questionnew"."stage" FROM "questionnew_questionnew" WHERE "questionnew_questionnew"."problem_id" = 3
+Duration: 0.000 seconds
+===================
+10===================
+problem_id:1
+Query: SELECT "problemnew_problemnew"."id", "problemnew_problemnew"."title", "problemnew_problemnew"."remark" FROM "problemnew_problemnew" WHERE "problemnew_problemnew"."id" = 1 LIMIT 21
+Duration: 0.000 seconds
+===================
+11===================
+problem_id:1
+Query: SELECT "questionnew_questionnew"."id", "questionnew_questionnew"."title", "questionnew_questionnew"."type", "questionnew_questionnew"."problem_id", "questionnew_questionnew"."payload", "questionnew_questionnew"."stage" FROM "questionnew_questionnew" WHERE "questionnew_questionnew"."problem_id" = 1
+Duration: 0.000 seconds
+===================
+12===================
+problem_id:7
+Query: SELECT "problemnew_problemnew"."id", "problemnew_problemnew"."title", "problemnew_problemnew"."remark" FROM "problemnew_problemnew" WHERE "problemnew_problemnew"."id" = 7 LIMIT 21
+Duration: 0.000 seconds
+===================
+13===================
+problem_id:7
+Query: SELECT "questionnew_questionnew"."id", "questionnew_questionnew"."title", "questionnew_questionnew"."type", "questionnew_questionnew"."problem_id", "questionnew_questionnew"."payload", "questionnew_questionnew"."stage" FROM "questionnew_questionnew" WHERE "questionnew_questionnew"."problem_id" = 7
+Duration: 0.000 seconds
+===================
+14===================
+problem_id:1
+Query: SELECT "problemnew_problemnew"."id", "problemnew_problemnew"."title", "problemnew_problemnew"."remark" FROM "problemnew_problemnew" WHERE "problemnew_problemnew"."id" = 1 LIMIT 21
+Duration: 0.000 seconds
+===================
+15===================
+problem_id:1
+Query: SELECT "questionnew_questionnew"."id", "questionnew_questionnew"."title", "questionnew_questionnew"."type", "questionnew_questionnew"."problem_id", "questionnew_questionnew"."payload", "questionnew_questionnew"."stage" FROM "questionnew_questionnew" WHERE "questionnew_questionnew"."problem_id" = 1
+Duration: 0.000 seconds
+===================
+16===================
+problem_id:5
+Query: SELECT "problemnew_problemnew"."id", "problemnew_problemnew"."title", "problemnew_problemnew"."remark" FROM "problemnew_problemnew" WHERE "problemnew_problemnew"."id" = 5 LIMIT 21
+Duration: 0.000 seconds
+===================
+17===================
+problem_id:5
+Query: SELECT "questionnew_questionnew"."id", "questionnew_questionnew"."title", "questionnew_questionnew"."type", "questionnew_questionnew"."problem_id", "questionnew_questionnew"."payload", "questionnew_questionnew"."stage" FROM "questionnew_questionnew" WHERE "questionnew_questionnew"."problem_id" = 5
+Duration: 0.000 seconds
+===================
+18===================
+problem_id:3
+Query: SELECT "problemnew_problemnew"."id", "problemnew_problemnew"."title", "problemnew_problemnew"."remark" FROM "problemnew_problemnew" WHERE "problemnew_problemnew"."id" = 3 LIMIT 21
+Duration: 0.000 seconds
+===================
+19===================
+problem_id:3
+Query: SELECT "questionnew_questionnew"."id", "questionnew_questionnew"."title", "questionnew_questionnew"."type", "questionnew_questionnew"."problem_id", "questionnew_questionnew"."payload", "questionnew_questionnew"."stage" FROM "questionnew_questionnew" WHERE "questionnew_questionnew"."problem_id" = 3
+Duration: 0.000 seconds
+===================

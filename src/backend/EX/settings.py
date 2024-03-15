@@ -29,8 +29,12 @@ if ENVIRONMENT == 'LOCAL':
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'db.sqlite3',
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'education_victory',
+            'USER': 'postgres',
+            'PASSWORD': 'root',
+            'HOST': 'localhost',
+            'PORT': '5432', # default PostgreSQL port
         }
     }
     STATIC_URL = 'static/'
@@ -74,6 +78,8 @@ INSTALLED_APPS = [
     'common.apps.CommonConfig',
     'problem.apps.ProblemConfig',
     'question.apps.QuestionConfig',
+    'problemnew.apps.ProblemnewConfig',
+    'questionnew.apps.QuestionnewConfig',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -81,6 +87,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
     'rest_framework',
+    "debug_toolbar",
 ]
 
 MIDDLEWARE = [
@@ -91,6 +98,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 AUTH_USER_MODEL = 'common.User'
@@ -189,6 +197,13 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
     }
 }
+
+INTERNAL_IPS = [
+    # Loopback
+    '127.0.0.1',
+    # Optionally, add other IP addresses here as strings.
+    # '192.168.1.1', # Example for another IP address in your local network
+]
 
 # Email
 ACCOUNT_EMAIL_REQUIRED = True

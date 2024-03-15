@@ -50,4 +50,5 @@ urlpatterns = [
     path('evaluation/<str:type>/', common_views.evaluation, name='evaluation'),
     path('practice/', common_views.practice, name='practice'),
     path('', common_views.home, name='home'),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]

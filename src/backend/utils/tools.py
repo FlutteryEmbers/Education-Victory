@@ -51,7 +51,7 @@ class Log():
     def dump(self):
         with open(self.dir, "w") as f:
             for i, line in enumerate(self.lines):
-                f.write(f'{i}===================\n')
+                # f.write(f'{i}===================\n')
                 f.write(line)
-                f.write('===================\n')
+                # f.write('===================\n')
         f.close()

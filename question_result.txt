@@ -1,0 +1,140 @@
+======test0===id2==========
+problem_id:2
+Query: SELECT "problem_problem"."id", "problem_problem"."name", "problem_problem"."category", "problem_problem"."desc", "problem_problem"."upvote", "problem_problem"."downvote", "problem_problem"."is_published", "problem_problem"."created_at", "problem_problem"."updated_at" FROM "problem_problem" WHERE "problem_problem"."id" = 2 LIMIT 21
+Duration: 0.000 seconds
+problem_id:2
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 2
+Duration: 0.000 seconds
+problem_id:2
+Query: SELECT "question_codingquestion"."id", "question_codingquestion"."problem_id", "question_codingquestion"."stage", "question_codingquestion"."desc", "question_codingquestion"."default_code", "question_codingquestion"."difficulty", "question_codingquestion"."answer", "question_codingquestion"."text_hint", "question_codingquestion"."text_hint_2", "question_codingquestion"."code_hint", "question_codingquestion"."created_at", "question_codingquestion"."updated_at" FROM "question_codingquestion" WHERE "question_codingquestion"."problem_id" = 2
+Duration: 0.000 seconds
+problem_id:2
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 2
+Duration: 0.000 seconds
+================
+======test1===id10==========
+problem_id:10
+Query: SELECT "problem_problem"."id", "problem_problem"."name", "problem_problem"."category", "problem_problem"."desc", "problem_problem"."upvote", "problem_problem"."downvote", "problem_problem"."is_published", "problem_problem"."created_at", "problem_problem"."updated_at" FROM "problem_problem" WHERE "problem_problem"."id" = 10 LIMIT 21
+Duration: 0.000 seconds
+problem_id:10
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 10
+Duration: 0.000 seconds
+problem_id:10
+Query: SELECT "question_codingquestion"."id", "question_codingquestion"."problem_id", "question_codingquestion"."stage", "question_codingquestion"."desc", "question_codingquestion"."default_code", "question_codingquestion"."difficulty", "question_codingquestion"."answer", "question_codingquestion"."text_hint", "question_codingquestion"."text_hint_2", "question_codingquestion"."code_hint", "question_codingquestion"."created_at", "question_codingquestion"."updated_at" FROM "question_codingquestion" WHERE "question_codingquestion"."problem_id" = 10
+Duration: 0.000 seconds
+problem_id:10
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 10
+Duration: 0.000 seconds
+================
+======test2===id2==========
+problem_id:2
+Query: SELECT "problem_problem"."id", "problem_problem"."name", "problem_problem"."category", "problem_problem"."desc", "problem_problem"."upvote", "problem_problem"."downvote", "problem_problem"."is_published", "problem_problem"."created_at", "problem_problem"."updated_at" FROM "problem_problem" WHERE "problem_problem"."id" = 2 LIMIT 21
+Duration: 0.000 seconds
+problem_id:2
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 2
+Duration: 0.000 seconds
+problem_id:2
+Query: SELECT "question_codingquestion"."id", "question_codingquestion"."problem_id", "question_codingquestion"."stage", "question_codingquestion"."desc", "question_codingquestion"."default_code", "question_codingquestion"."difficulty", "question_codingquestion"."answer", "question_codingquestion"."text_hint", "question_codingquestion"."text_hint_2", "question_codingquestion"."code_hint", "question_codingquestion"."created_at", "question_codingquestion"."updated_at" FROM "question_codingquestion" WHERE "question_codingquestion"."problem_id" = 2
+Duration: 0.000 seconds
+problem_id:2
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 2
+Duration: 0.000 seconds
+================
+======test3===id6==========
+problem_id:6
+Query: SELECT "problem_problem"."id", "problem_problem"."name", "problem_problem"."category", "problem_problem"."desc", "problem_problem"."upvote", "problem_problem"."downvote", "problem_problem"."is_published", "problem_problem"."created_at", "problem_problem"."updated_at" FROM "problem_problem" WHERE "problem_problem"."id" = 6 LIMIT 21
+Duration: 0.000 seconds
+problem_id:6
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 6
+Duration: 0.000 seconds
+problem_id:6
+Query: SELECT "question_codingquestion"."id", "question_codingquestion"."problem_id", "question_codingquestion"."stage", "question_codingquestion"."desc", "question_codingquestion"."default_code", "question_codingquestion"."difficulty", "question_codingquestion"."answer", "question_codingquestion"."text_hint", "question_codingquestion"."text_hint_2", "question_codingquestion"."code_hint", "question_codingquestion"."created_at", "question_codingquestion"."updated_at" FROM "question_codingquestion" WHERE "question_codingquestion"."problem_id" = 6
+Duration: 0.000 seconds
+problem_id:6
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 6
+Duration: 0.000 seconds
+================
+======test4===id10==========
+problem_id:10
+Query: SELECT "problem_problem"."id", "problem_problem"."name", "problem_problem"."category", "problem_problem"."desc", "problem_problem"."upvote", "problem_problem"."downvote", "problem_problem"."is_published", "problem_problem"."created_at", "problem_problem"."updated_at" FROM "problem_problem" WHERE "problem_problem"."id" = 10 LIMIT 21
+Duration: 0.000 seconds
+problem_id:10
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 10
+Duration: 0.000 seconds
+problem_id:10
+Query: SELECT "question_codingquestion"."id", "question_codingquestion"."problem_id", "question_codingquestion"."stage", "question_codingquestion"."desc", "question_codingquestion"."default_code", "question_codingquestion"."difficulty", "question_codingquestion"."answer", "question_codingquestion"."text_hint", "question_codingquestion"."text_hint_2", "question_codingquestion"."code_hint", "question_codingquestion"."created_at", "question_codingquestion"."updated_at" FROM "question_codingquestion" WHERE "question_codingquestion"."problem_id" = 10
+Duration: 0.000 seconds
+problem_id:10
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 10
+Duration: 0.000 seconds
+================
+======test5===id5==========
+problem_id:5
+Query: SELECT "problem_problem"."id", "problem_problem"."name", "problem_problem"."category", "problem_problem"."desc", "problem_problem"."upvote", "problem_problem"."downvote", "problem_problem"."is_published", "problem_problem"."created_at", "problem_problem"."updated_at" FROM "problem_problem" WHERE "problem_problem"."id" = 5 LIMIT 21
+Duration: 0.000 seconds
+problem_id:5
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 5
+Duration: 0.000 seconds
+problem_id:5
+Query: SELECT "question_codingquestion"."id", "question_codingquestion"."problem_id", "question_codingquestion"."stage", "question_codingquestion"."desc", "question_codingquestion"."default_code", "question_codingquestion"."difficulty", "question_codingquestion"."answer", "question_codingquestion"."text_hint", "question_codingquestion"."text_hint_2", "question_codingquestion"."code_hint", "question_codingquestion"."created_at", "question_codingquestion"."updated_at" FROM "question_codingquestion" WHERE "question_codingquestion"."problem_id" = 5
+Duration: 0.000 seconds
+problem_id:5
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 5
+Duration: 0.000 seconds
+================
+======test6===id9==========
+problem_id:9
+Query: SELECT "problem_problem"."id", "problem_problem"."name", "problem_problem"."category", "problem_problem"."desc", "problem_problem"."upvote", "problem_problem"."downvote", "problem_problem"."is_published", "problem_problem"."created_at", "problem_problem"."updated_at" FROM "problem_problem" WHERE "problem_problem"."id" = 9 LIMIT 21
+Duration: 0.000 seconds
+problem_id:9
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 9
+Duration: 0.000 seconds
+problem_id:9
+Query: SELECT "question_codingquestion"."id", "question_codingquestion"."problem_id", "question_codingquestion"."stage", "question_codingquestion"."desc", "question_codingquestion"."default_code", "question_codingquestion"."difficulty", "question_codingquestion"."answer", "question_codingquestion"."text_hint", "question_codingquestion"."text_hint_2", "question_codingquestion"."code_hint", "question_codingquestion"."created_at", "question_codingquestion"."updated_at" FROM "question_codingquestion" WHERE "question_codingquestion"."problem_id" = 9
+Duration: 0.000 seconds
+problem_id:9
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 9
+Duration: 0.000 seconds
+================
+======test7===id5==========
+problem_id:5
+Query: SELECT "problem_problem"."id", "problem_problem"."name", "problem_problem"."category", "problem_problem"."desc", "problem_problem"."upvote", "problem_problem"."downvote", "problem_problem"."is_published", "problem_problem"."created_at", "problem_problem"."updated_at" FROM "problem_problem" WHERE "problem_problem"."id" = 5 LIMIT 21
+Duration: 0.000 seconds
+problem_id:5
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 5
+Duration: 0.000 seconds
+problem_id:5
+Query: SELECT "question_codingquestion"."id", "question_codingquestion"."problem_id", "question_codingquestion"."stage", "question_codingquestion"."desc", "question_codingquestion"."default_code", "question_codingquestion"."difficulty", "question_codingquestion"."answer", "question_codingquestion"."text_hint", "question_codingquestion"."text_hint_2", "question_codingquestion"."code_hint", "question_codingquestion"."created_at", "question_codingquestion"."updated_at" FROM "question_codingquestion" WHERE "question_codingquestion"."problem_id" = 5
+Duration: 0.000 seconds
+problem_id:5
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 5
+Duration: 0.000 seconds
+================
+======test8===id1==========
+problem_id:1
+Query: SELECT "problem_problem"."id", "problem_problem"."name", "problem_problem"."category", "problem_problem"."desc", "problem_problem"."upvote", "problem_problem"."downvote", "problem_problem"."is_published", "problem_problem"."created_at", "problem_problem"."updated_at" FROM "problem_problem" WHERE "problem_problem"."id" = 1 LIMIT 21
+Duration: 0.000 seconds
+problem_id:1
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 1
+Duration: 0.000 seconds
+problem_id:1
+Query: SELECT "question_codingquestion"."id", "question_codingquestion"."problem_id", "question_codingquestion"."stage", "question_codingquestion"."desc", "question_codingquestion"."default_code", "question_codingquestion"."difficulty", "question_codingquestion"."answer", "question_codingquestion"."text_hint", "question_codingquestion"."text_hint_2", "question_codingquestion"."code_hint", "question_codingquestion"."created_at", "question_codingquestion"."updated_at" FROM "question_codingquestion" WHERE "question_codingquestion"."problem_id" = 1
+Duration: 0.000 seconds
+problem_id:1
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 1
+Duration: 0.000 seconds
+================
+======test9===id5==========
+problem_id:5
+Query: SELECT "problem_problem"."id", "problem_problem"."name", "problem_problem"."category", "problem_problem"."desc", "problem_problem"."upvote", "problem_problem"."downvote", "problem_problem"."is_published", "problem_problem"."created_at", "problem_problem"."updated_at" FROM "problem_problem" WHERE "problem_problem"."id" = 5 LIMIT 21
+Duration: 0.000 seconds
+problem_id:5
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 5
+Duration: 0.000 seconds
+problem_id:5
+Query: SELECT "question_codingquestion"."id", "question_codingquestion"."problem_id", "question_codingquestion"."stage", "question_codingquestion"."desc", "question_codingquestion"."default_code", "question_codingquestion"."difficulty", "question_codingquestion"."answer", "question_codingquestion"."text_hint", "question_codingquestion"."text_hint_2", "question_codingquestion"."code_hint", "question_codingquestion"."created_at", "question_codingquestion"."updated_at" FROM "question_codingquestion" WHERE "question_codingquestion"."problem_id" = 5
+Duration: 0.000 seconds
+problem_id:5
+Query: SELECT "question_choicequestion"."id", "question_choicequestion"."problem_id", "question_choicequestion"."stage", "question_choicequestion"."desc", "question_choicequestion"."answer_type", "question_choicequestion"."difficulty", "question_choicequestion"."choice", "question_choicequestion"."answer", "question_choicequestion"."explain", "question_choicequestion"."text_hint", "question_choicequestion"."text_hint_2", "question_choicequestion"."created_at", "question_choicequestion"."updated_at" FROM "question_choicequestion" WHERE "question_choicequestion"."problem_id" = 5
+Duration: 0.000 seconds
+================

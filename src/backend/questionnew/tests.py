@@ -32,9 +32,12 @@ class MyModelTestCase(TestCase):
                 # item2 = Questionnew.objects.filter(problem_id=10, type=2)
             #print(item[0].type)
             # print(queries.captured_queries)
+            self.log.add_line(f'======test{i}===id{id}==========\n')
             for query in queries.captured_queries:
                 self.log.add_line(f"problem_id:{id}\n" + f"Query: {query['sql']}\n" + f"Duration: {query['time']} seconds\n")
                 print(f"Query: {query['sql']}")
                 print(f"Duration: {query['time']} seconds")
+
+            self.log.add_line(f'================================\n')
             
         self.log.dump()

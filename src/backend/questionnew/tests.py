@@ -10,8 +10,8 @@ class MyModelTestCase(TestCase):
     def setUp(self):
         print('start setting up')
         self.rg = Random_Generator(seed=10)
-        self.log = Log('./new_question_result.txt')
-        self.N = 10
+        self.N = 1_000_000
+        self.log = Log('./new_question_result_{}.txt'.format(self.N))
         for i in range(self.N):
             problem = Problemnew.objects.create(title=self.rg.sample_one(128), remark=self.rg.sample_one(128))
             question1 = Questionnew.objects.create(problem=problem, type=1, payload=self.rg.generate_random_json(), title=self.rg.sample_one(128))
@@ -22,9 +22,19 @@ class MyModelTestCase(TestCase):
 
     def test_query_my_model(self):
         """Test querying an object from MyModel"""
-        for i in range(10):
+        self.log.add_line(f'======test_random_access==========\n')
+        for i in range(100):
             id = self.rg.random_num(self.N)
-            with CaptureQueriesContext(connection) as queries:
+            self.test_query_by_id(id=id)
+
+        self.log.add_line(f'======test_access_==========\n')
+        ids = [2, self.N//2, self.N - 10]
+        for id in ids:
+            self.test_query_by_id(id=id)
+        self.log.dump()
+
+    def test_query_by_id(self, id):
+        with CaptureQueriesContext(connection) as queries:
                 problem = Problemnew.objects.get(id=id)
                 # Perform the operations that generate queries here
                 # print(problem.id)
@@ -32,12 +42,10 @@ class MyModelTestCase(TestCase):
                 # item2 = Questionnew.objects.filter(problem_id=10, type=2)
             #print(item[0].type)
             # print(queries.captured_queries)
-            self.log.add_line(f'======test{i}===id{id}==========\n')
-            for query in queries.captured_queries:
-                self.log.add_line(f"problem_id:{id}\n" + f"Query: {query['sql']}\n" + f"Duration: {query['time']} seconds\n")
-                print(f"Query: {query['sql']}")
-                print(f"Duration: {query['time']} seconds")
+        self.log.add_line(f'======test{i}===id{id}==========\n')
+        for query in queries.captured_queries:
+            self.log.add_line(f"problem_id:{id}\n" + f"Query: {query['sql']}\n" + f"Duration: {query['time']} seconds\n")
+            print(f"Query: {query['sql']}")
+            print(f"Duration: {query['time']} seconds")
 
-            self.log.add_line(f'================================\n')
-            
-        self.log.dump()
+        self.log.add_line(f'================================\n')

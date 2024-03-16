@@ -11,8 +11,8 @@ class MyModelTestCase(TestCase):
     def setUp(self):
         print('start setting up')
         self.rg = Random_Generator(seed=10)
-        self.log = Log('./question_result.txt')
-        self.N = 10
+        self.N = 1_000_000
+        self.log = Log('./question_result_{}.txt'.format(self.N))
         for i in range(self.N):
             problem = Problem.objects.create(name=self.rg.sample_one(80))
             question1 = ChoiceQuestion.objects.create(problem=problem, answer_type=0, text_hint=self.rg.sample_one(500))
@@ -22,27 +22,35 @@ class MyModelTestCase(TestCase):
 
     def test_query_my_model(self):
         """Test querying an object from MyModel"""
-        for i in range(10):
+        self.log.add_line(f'======test_random_access==========\n')
+        for i in range(100):
             id = self.rg.random_num(self.N)
-            with CaptureQueriesContext(connection) as queries:
-                problem = Problem.objects.get(id=id)
-                # Perform the operations that generate queries here
-                # print(problem.id)
-                item = list(ChoiceQuestion.objects.filter(problem_id=problem.id))
-                item = list(CodingQuestion.objects.filter(problem_id=problem.id))
-                item = list(ChoiceQuestion.objects.filter(problem_id=problem.id))
-                # item2 = Questionnew.objects.filter(problem_id=10, type=2)
-            #print(item[0].type)
-            # print(queries.captured_queries)
-            self.log.add_line(f'======test{i}===id{id}==========\n')
-            for query in queries.captured_queries:
-                self.log.add_line(f"problem_id:{id}\n" + f"Query: {query['sql']}\n" + f"Duration: {query['time']} seconds\n")
-                print(f"Query: {query['sql']}")
-                print(f"Duration: {query['time']} seconds")
-            self.log.add_line('================\n')
+            self.query_by_id(id=id)
+
+        self.log.add_line(f'======test_access_==========\n')
+        ids = [2, self.N//2, self.N - 10]
+        for id in ids:
+            self.query_by_id(id=id)
         self.log.dump()
         # self.assertEqual(my_object.id, 2)
 
+    def query_by_id(self, id):
+        with CaptureQueriesContext(connection) as queries:
+            problem = Problem.objects.get(id=id)
+            # Perform the operations that generate queries here
+            # print(problem.id)
+            item = list(ChoiceQuestion.objects.filter(problem_id=problem.id))
+            item = list(CodingQuestion.objects.filter(problem_id=problem.id))
+            item = list(ChoiceQuestion.objects.filter(problem_id=problem.id))
+            # item2 = Questionnew.objects.filter(problem_id=10, type=2)
+        #print(item[0].type)
+        # print(queries.captured_queries)
+        self.log.add_line(f'===========id{id}==========\n')
+        for query in queries.captured_queries:
+            self.log.add_line(f"problem_id:{id}\n" + f"Query: {query['sql']}\n" + f"Duration: {query['time']} seconds\n")
+            print(f"Query: {query['sql']}")
+            print(f"Duration: {query['time']} seconds")
+        self.log.add_line('================\n')
 
 '''
 from .models import Category

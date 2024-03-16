@@ -13,6 +13,7 @@ class MyModelTestCase(TestCase):
         self.N = 1_000_000
         self.log = Log('./new_question_result_{}.txt'.format(self.N))
         for i in range(self.N):
+            if i % 1000 == 0: print('done create {}'.format(i // 1000))
             problem = Problemnew.objects.create(title=self.rg.sample_one(128), remark=self.rg.sample_one(128))
             question1 = Questionnew.objects.create(problem=problem, type=1, payload=self.rg.generate_random_json(), title=self.rg.sample_one(128))
             question2 = Questionnew.objects.create(problem=problem, type=2, payload=self.rg.generate_random_json(), title=self.rg.sample_one(128))
@@ -25,15 +26,15 @@ class MyModelTestCase(TestCase):
         self.log.add_line(f'======test_random_access==========\n')
         for i in range(100):
             id = self.rg.random_num(self.N)
-            self.test_query_by_id(id=id)
+            self.query_by_id(id=id)
 
         self.log.add_line(f'======test_access_==========\n')
         ids = [2, self.N//2, self.N - 10]
         for id in ids:
-            self.test_query_by_id(id=id)
+            self.query_by_id(id=id)
         self.log.dump()
 
-    def test_query_by_id(self, id):
+    def query_by_id(self, id):
         with CaptureQueriesContext(connection) as queries:
                 problem = Problemnew.objects.get(id=id)
                 # Perform the operations that generate queries here
@@ -42,7 +43,7 @@ class MyModelTestCase(TestCase):
                 # item2 = Questionnew.objects.filter(problem_id=10, type=2)
             #print(item[0].type)
             # print(queries.captured_queries)
-        self.log.add_line(f'======test{i}===id{id}==========\n')
+        self.log.add_line(f'======test===id{id}==========\n')
         for query in queries.captured_queries:
             self.log.add_line(f"problem_id:{id}\n" + f"Query: {query['sql']}\n" + f"Duration: {query['time']} seconds\n")
             print(f"Query: {query['sql']}")

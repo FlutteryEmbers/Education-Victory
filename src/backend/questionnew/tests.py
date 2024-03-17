@@ -10,7 +10,7 @@ class MyModelTestCase(TestCase):
     def setUp(self):
         print('start setting up')
         self.rg = Random_Generator(seed=10)
-        self.N = 1_000_000
+        self.N = 100_000_000
         self.log = Log('./new_question_result_{}.txt'.format(self.N))
         for i in range(self.N):
             if i % 1000 == 0: print('done create {}'.format(i // 1000))

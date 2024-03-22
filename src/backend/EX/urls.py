@@ -24,6 +24,7 @@ from question import views as question_views
 from common import views as common_views
 from rest_framework import routers
 from rest_framework.schemas import get_schema_view
+from questionnew.views import QuestionnewListCreate
 
 # Sets up the viewsets for models and maps them to appropriate URLs using SimpleRouter
 router = routers.DefaultRouter()
@@ -46,9 +47,12 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('api/evaluation_simple/', common_views.evaluation_simple),
     path('api/', include((router.urls, 'app_name'))),
+    path('api/', include('questionnew.urls')),
+    path('api/', include('question.urls')),
     path('system-design/<str:name>/', problem_views.problem, name='problem'),
     path('evaluation/<str:type>/', common_views.evaluation, name='evaluation'),
     path('practice/', common_views.practice, name='practice'),
     path('', common_views.home, name='home'),
     path("__debug__/", include("debug_toolbar.urls")),
+    # path('questionnew/', QuestionnewListCreate.as_view(), name='questionnew-list-create'),
 ]

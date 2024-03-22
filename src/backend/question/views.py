@@ -5,7 +5,7 @@ from django.db.models.functions import Coalesce
 from django.contrib.contenttypes.models import ContentType
 from django.shortcuts import render
 from django.utils import timezone
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, action
@@ -15,6 +15,13 @@ from .serializers import CodingQuestionSerializer, ChoiceQuestionSerializer, Use
 
 
 LAST_YEAR = timezone.now() - timedelta(days=365)
+
+class QuestionListCreate(generics.ListCreateAPIView):
+    queryset = model_a = ChoiceQuestion.objects.filter(problem_id=1000)
+    # model_b = CodingQuestion.objects.filter(problem_id=1000)
+    serializer_class = ChoiceQuestionSerializer
+    # sb = CodingQuestionSerializer(model_b)
+    # queryset = Response({'choice': sa.data, 'coding': sb.data})
 
 
 class QuestionViewSet(viewsets.ViewSet):

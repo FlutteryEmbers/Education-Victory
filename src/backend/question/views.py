@@ -7,21 +7,25 @@ from django.shortcuts import render
 from django.utils import timezone
 from rest_framework import viewsets, generics
 from rest_framework import status
+from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, action
 from problem.models import Problem
 from .models import CodingQuestion, ChoiceQuestion, UserSubmission
 from .serializers import CodingQuestionSerializer, ChoiceQuestionSerializer, UserSubmissionSerializer
+import random
 
 
 LAST_YEAR = timezone.now() - timedelta(days=365)
 
-class QuestionListCreate(generics.ListCreateAPIView):
-    queryset = model_a = ChoiceQuestion.objects.filter(problem_id=1000)
-    # model_b = CodingQuestion.objects.filter(problem_id=1000)
-    serializer_class = ChoiceQuestionSerializer
-    # sb = CodingQuestionSerializer(model_b)
-    # queryset = Response({'choice': sa.data, 'coding': sb.data})
+class QuestionListCreate(APIView):
+    def get(self, request, format=None):
+        N = random.randint(9900, 10000)
+        model_a = ChoiceQuestion.objects.filter(problem_id=N)
+        model_b = CodingQuestion.objects.filter(problem_id=N)
+        sa = ChoiceQuestionSerializer(model_a, many=True)
+        sb = CodingQuestionSerializer(model_b, many=True)
+        return Response({'choice': sa.data, 'coding': sb.data})
 
 
 class QuestionViewSet(viewsets.ViewSet):

@@ -10,7 +10,8 @@ console_command = "/code/manage.py shell"
 [build]
 
 [deploy]
-release_command = "python [manage.py](http://manage.py/) migrate"
+# release_command = "python [manage.py](http://manage.py/) migrate"
+release_command = "python manage.py migrate"
 
 [env]
 CSRF = "https://*.fly.dev"

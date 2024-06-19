@@ -1,0 +1,88 @@
+name: Django CI
+
+on:
+  push:
+    branches: ["main", "development"]
+  pull_request:
+    branches: ["main", "development"]
+
+jobs:
+  deploy-staging:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/development' && github.event_name == 'push'
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
+
+    - name: Install Fly.io CLI
+      run: |
+        curl -L https://fly.io/install.sh | sh
+
+    - name: Log in to Fly.io
+      run: |
+        export PATH="$HOME/.fly/bin:$PATH"  # Ensuring PATH is updated in the current shell
+        export FLY_ACCESS_TOKEN=${{ secrets.FLY_API_TOKEN }}
+        flyctl auth token
+
+    - name: Deploy to Fly.io
+      run: |
+        echo "ENVIRONMENT=stage" >> $GITHUB_ENV
+        echo ${{ vars.ENVIRONMENT }}
+        export PATH="$HOME/.fly/bin:$PATH"  # Ensuring PATH is updated in the current shell
+        cd src/backend
+        flyctl deploy
+      env:
+        name: stage
+        FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        DATABASE_URL: ${{vars.DATABASE_URL}}
+        CSRF: ${{vars.CSRF}}
+        EMAIL_BACKEND: ${{vars.EMAIL_BACKEND}}
+        ENVIRONMENT: ${{vars.ENVIRONMENT}}
+        PORT: ${{vars.PORT}}
+        ROOT: ${{vars.ROOT}}
+        HOST: ${{vars.HOST}}
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: deploy-staging
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
+
+    - name: Install Fly.io CLI
+      run: |
+        curl -L https://fly.io/install.sh | sh
+
+    - name: Log in to Fly.io
+      run: |
+        export PATH="$HOME/.fly/bin:$PATH"  # Ensuring PATH is updated in the current shell
+        export FLY_ACCESS_TOKEN=${{ secrets.FLY_API_TOKEN }}
+        flyctl auth token
+
+    - name: Deploy to Fly.io
+      run: |
+        echo "ENVIRONMENT=prod" >> $GITHUB_ENV
+        echo ${{ vars.ENVIRONMENT }}
+        export PATH="$HOME/.fly/bin:$PATH"  # Ensuring PATH is updated in the current shell
+        cd src/backend
+        flyctl deploy
+      env:
+        name: stage
+        FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        DATABASE_URL: ${{vars.DATABASE_URL}}
+        CSRF: ${{vars.CSRF}}
+        EMAIL_BACKEND: ${{vars.EMAIL_BACKEND}}
+        ENVIRONMENT: ${{vars.ENVIRONMENT}}
+        PORT: ${{vars.PORT}}
+        ROOT: ${{vars.ROOT}}
+        HOST: ${{vars.HOST}}

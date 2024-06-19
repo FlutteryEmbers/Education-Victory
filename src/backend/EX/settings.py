@@ -54,8 +54,8 @@ elif ENVIRONMENT in ('TEST', 'PRODUCTION'):
     # CSRF_TRUSTED_ORIGINS = ['https://*', 'http://*']
     DATABASES = {
         'default': dj_database_url.parse(
-            # os.getenv('DATABASE_URL'),
-            "postgres://postgres:b71JGJvwulPbiOf@ev-test-db.flycast:5432",
+            os.getenv('DATABASE_URL'),
+            # "postgres://postgres:b71JGJvwulPbiOf@ev-test-db.flycast:5432",
             conn_max_age=600,
             conn_health_checks=True,
             )

@@ -28,6 +28,7 @@ jobs:
         export PATH="$HOME/.fly/bin:$PATH"  # Ensuring PATH is updated in the current shell
         export FLY_ACCESS_TOKEN=${{ secrets.FLY_API_TOKEN }}
         flyctl auth token
+          
 
     - name: Deploy to Fly.io
       run: |
@@ -35,6 +36,13 @@ jobs:
         echo ${{ vars.ENVIRONMENT }}
         export PATH="$HOME/.fly/bin:$PATH"  # Ensuring PATH is updated in the current shell
         cd src/backend
+        fly secrets set DATABASE_URL=${{ vars.DATABASE_URL }}
+        fly secrets set CSRF=${{vars.CSRF}}
+        fly secrets set EMAIL_BACKEND=${{ vars.EMAIL_BACKEND }}
+        fly secrets set ENVIRONMENT=${{ vars.ENVIRONMENT }}
+        fly secrets set PORT=${{ vars.PORT }}
+        fly secrets set ROOT=${{ vars.ROOT }}
+        fly secrets set HOST=${{ vars.HOST }}
         flyctl deploy
       env:
         FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

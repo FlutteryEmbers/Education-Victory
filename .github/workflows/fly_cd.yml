@@ -1,4 +1,4 @@
-name: Django CI
+name: Django CD
 
 on:
   push:
@@ -82,7 +82,7 @@ jobs:
         DATABASE_URL: ${{vars.DATABASE_URL}}
         CSRF: ${{vars.CSRF}}
         EMAIL_BACKEND: ${{vars.EMAIL_BACKEND}}
-        ENVIRONMENT: ${{vars.ENVIRONMENT}}
+        ENVIRONMENT: ${{env.vars.ENVIRONMENT}}
         PORT: ${{vars.PORT}}
         ROOT: ${{vars.ROOT}}
         HOST: ${{vars.HOST}}

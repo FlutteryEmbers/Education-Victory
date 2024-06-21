@@ -5,7 +5,10 @@ on:
     branches:
   pull_request:
     branches:
-
+    
+env:
+  ENVIRONMENT: LOCAL
+  
 jobs:
   build:
     runs-on: ubuntu-latest

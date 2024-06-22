@@ -14,7 +14,7 @@ console_command = '/code/manage.py shell'
 
 [env]
   CSRF = "https://*.fly.dev"
-  ENVIRONMENT = "TEST"
+  ENVIRONMENT = "PLACEHOLDER_ENVIRONMENT"
   PORT = "PLACEHOLDER_PORT"
   ROOT = "PLACEHOLDER_ROOT"
   HOST = "PLACEHOLDER_HOST"
